@@ -2667,7 +2667,7 @@ bool BGTactics::Execute(Event event)
                 return true;
 
         uint32 role = context->GetValue<uint32>("bg role")->Get();
-        bool supporter = role < 5;
+        bool supporter = role < 2;
         if (supporter && protectFC())
             return true;
     }
