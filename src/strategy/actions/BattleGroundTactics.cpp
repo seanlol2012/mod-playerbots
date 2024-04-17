@@ -4073,7 +4073,7 @@ bool BGTactics::moveToObjective()
         }
 
         // don't try to move if already close
-        if (sqrt(bot->GetDistance(pos.x, pos.y, pos.z)) < 5.0f)
+        if (sqrt(bot->GetDistance(pos.x, pos.y, pos.z)) < 1.5f)
         {
             resetObjective();
 
