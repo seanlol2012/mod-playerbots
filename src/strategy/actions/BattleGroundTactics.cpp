@@ -2662,9 +2662,12 @@ bool BGTactics::Execute(Event event)
 
     if (getName() == "protect fc")
     {
-        if (!bot->IsMounted() && !bot->IsInCombat())
-            if (botAI->DoSpecificAction("check mount state"))
-                return true;
+        if (urand(0, 10) < 3)
+        {
+            if (!bot->IsMounted() && !bot->IsInCombat())
+                if (botAI->DoSpecificAction("check mount state"))
+                    return true;
+        }
 
         uint32 role = context->GetValue<uint32>("bg role")->Get();
         bool supporter = role < 2;
